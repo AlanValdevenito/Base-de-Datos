@@ -1,0 +1,3 @@
+SELECT * FROM teams;
+
+DELETE FROM teams WHERE team = 'ARGENTINA';
