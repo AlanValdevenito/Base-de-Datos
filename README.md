@@ -6,28 +6,24 @@ Ejercicios y entregas de la materia Base de Datos, catedra Roman (ex-Beiro), de 
 
 - Sistemas de Gestión de Bases de Datos.
   
-- Modelado conceptual de datos. El modelo Entidad-Interrelación (ER).
+- Modelado conceptual de datos: Modelo relacional: esquema de relación, atributos, dominios. Restricciones de dominio, de unicidad y de integridad. Clave primaria, clave candidata, superclave. Valores nulos. Esquema de base de datos relacional. Claves foráneas. Pasaje del modelo entidad-interrelación al modelo relacional.
   
-- El modelo lógico relacional.
+- El modelo lógico relacional: Esquema de relación, atributos, dominios. Restricciones de dominio, de unicidad y de integridad. Clave primaria, clave candidata, superclave. Valores nulos. Esquema de base de datos relacional. Claves foráneas. Pasaje del modelo entidad-interrelación al modelo relacional.
   
-- Normalización de datos. Dependencias funcionales y multivaluadas.
+- Normalización de datos: Objetivos del diseño relacional. Dependencia funcional. Primera forma normal (1FN): definición. Dependencia funcional parcial. Segunda forma normal (2FN): definición. Dependencia funcional transitiva. Tercera forma normal (3FN): definición. Forma normal Boyce-Codd (FNBC): definición. Dependencia multivaluada. Cuarta forma normal (4FN): definición. Dependencia de junta. Quinta forma normal (5FN): definición. Teoría de la normalización: Conjunto de dependencias funcionales. Axiomas de Armstrong. Inferencia de dependencias funcionales. Clausura de un conjunto de dependencias funcionales. Clausura de un conjunto de atributos. Equivalencia entre conjuntos de dependencias funcionales. Cubrimiento minimal de un conjunto de dependencias. Algoritmo de búsqueda de un cubrimiento minimal. Algoritmo de descomposición a 3FN. Proyección de un conjunto de dependencias funcionales sobre un conjunto de atributos. Preservación de dependencias funcionales. Algoritmo de búsqueda de claves candidatas. Algoritmo de descomposición a FNBC. Preservación de información. Algoritmo de Chase.
   
 - Álgebra y cálculo relacionales.
   
-- El lenguaje SQL.
+- El lenguaje SQL: Estructura del estándar. Definición de datos. Ccreación de esquemas, tipos de dato, creación de tablas, definición de restricciones de clave primaria, clave candidata y clave foránea, reglas de integridad en la definición de claves foráneas ('ON UPDATE' y 'ON DELETE'). Comparación entre SQL y el modelo relacional. Manipulación de datos. Esquema básico de consulta ('SELECT ... FROM ... WHERE'). Operaciones de junta. Operaciones de conjuntos. Ordenamiento y paginación. Esquema de consulta con agregación ('... GROUP BY ... HAVING'). Consultas anidadas. Inserciones, eliminaciones y modificaciones de datos: restricciones de integridad. Eliminación de tablas y esquemas.
   
-- Procesamiento y optimización de consultas.
+- Procesamiento y optimización de consultas: Esquema básico de procesamiento de una consulta. Información de catálogo. Plan lógico de consulta. Árbol de consulta. Plan físico de ejecución. Índices primarios, de clustering y secundarios. Creación de índices en SQL. Cálculo de costos de los operadores: selección (file scan e index scan), proyección, junta (por bloques, en único loop con índice, sort-merge, junta hash variante GRACE). Pipelining. Estimación de cardinalidad del resultado de un operador: selección, proyección, junta. Estimación con histograma de la selección y la junta. Reglas de equivalencia algebraica. Heurísticas de optimización algebraica. Cálculo del costo total de un plan de ejecución.
   
-- Control de concurrencia en bases de datos. Transacciones.
+- Control de concurrencia en bases de datos y transacciones: Sistemas multiprocesador y multitarea. Concurrencia: definición. Modelo de concurrencia solapada. Transacción: definición. Propiedades ACID. Anomalías de la ejecución concurrente: lectura sucia, actualización perdida, lectura no repetible, escritura sucia, fantasma. Solapamiento de transacciones: definición. Ejecución serial. Serializabilidad de un solapamiento. Ejecución serializable. Equivalencia de solapamientos: equivalencia de resultados, equivalencia por conflictos, equivalencia de vista. Conflicto: definición. Grafo de precedencias: definición, construcción. Algoritmo de ordenamiento topológico. Enfoques del control de concurrencia: optimista y pesimista. Control de concurrencia basado en locks. Tipos de lock: locks génericos, de lectura y de escritura. Protocolo de lock de dos fases (2PL). Deadlock: definición, mecanismos de prevención. Grafo de alocación de recursos. Inanición: definición. Recuperabilidad de un solapamiento. Gestor de recuperación: concepto de log. Rollback de transacciones. Rollbacks en cascada. Protocolo de lock de dos fases estricto (S2PL). Protocolo de lock de dos fases riguroso (R2PL). Niveles de aislamiento: concepto, definición en SQL.
   
-- Mecanismos de recuperación.
-  
-- Seguridad en bases de datos.
-  
-- Bases de datos espaciales.
+- Mecanismos de recuperación: Fallas: tipos de fallas, fallas catastróficas. Registros de log. Reglas WAL (Write Ahead Log) y FLC (Force Log at Commit). Algoritmos de recuperación: algoritmo UNDO, algoritmo REDO, algoritmo UNDO/REDO. Puntos de control (checkpoints): definición, checkpointing activo e inactivo. Algoritmo UNDO con checkpointing inactivo. Algoritmos UNDO, REDO y UNDO/REDO con checkpointing activo.
   
 - Introducción a las bases de datos distribuidas. Replicación y consistencia.
   
-- NoSQL.
+- NoSQL: Clasificación: bases de datos clave-valor, bases de datos wide column, bases de datos orientadas a documentos, bases de datos basadas en grafos. Desnormalización de datos. Base de datos libre de esquema. Bases de datos clave-valor: concepto, ejemplos. Arquitectura general de DynamoDB. Simulación de una estructura de tabla en una base de datos clave-valor. Bases de datos wide column: concepto, ejemplos. Arquitectura general de Cassandra: key spaces, column families, wide rows. El lenguaje CQL: definición de column families, tipos de dato. Claves primarias en Cassandra: partition key y candidate key. Reglas de consulta con CQL en Cassandra. Diseño conceptual en Cassandra: diseño orientado a las consultas, diagramas Chebotko. Bases de datos orientadas a documentos: concepto, ejemplos. Documento: concepto, ejemplos. Documento JSON: estructura básica. Arquitectura general de MongoDB: ObjectIds, documentos anidados y embebidos. Consultas básicas en MongoDB: cursores. Pipeline de agregación de MongoDB. Sharding: definición. Sharding en MongoDB: shard key, shards, replica sets. Esquema de maestro-esclavo con recuperación automática en MongoDB. Bases de datos basadas en grafos: concepto, ejemplos. Arquitectura general de Neo4J. Definición de nodos y arcos. El lenguaje Cypher: esquema básico de consulta. El modelo MapReduce: concepto, motivación. Funciones map y reduce. El Teorema CAP: definición e implicancias. Propiedades BASE.
   
 - Introducción a Data Warehousing.
